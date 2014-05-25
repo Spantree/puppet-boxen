@@ -80,7 +80,8 @@ private
   end
 
   def app_path
-    "/Applications/#{@resource[:name]}.app"
+    app_name = @resource[:app_name] || @resource[:name] 
+    "/Applications/#{app_name}.app"
   end
 
   def cached_path
